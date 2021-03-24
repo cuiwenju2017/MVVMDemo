@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.example.mvvmdemo.view.LeoTitleBar
+            android:id="@+id/leoTitleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hl_background="@color/colorPrimary"
+            app:hl_textTitle=""
+            app:hl_textTitleColor="@android:color/white" />
+
+        <com.example.mvvmdemo.view.X5WebView
+            android:id="@+id/webViewX5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" />
+    </LinearLayout>
+</layout>

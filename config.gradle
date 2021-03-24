@@ -1,0 +1,59 @@
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+ext {
+    ver = [
+            //Version
+            versionCode      : 1,
+            versionName      : "1.0.0",
+
+            //SDK And Tools
+            minSdkVersion    : 21,
+            targetSdkVersion : 30,
+            compileSdkVersion: 30,
+    ]
+
+    library = [
+            //okhttp、retrofit、rxjava
+            okhttp                       : "com.squareup.okhttp3:okhttp:3.10.0",
+            retrofit                     : "com.squareup.retrofit2:retrofit:2.3.0",
+            converter_gson               : "com.squareup.retrofit2:converter-gson:2.3.0",
+            adapter_rxjava2              : "com.squareup.retrofit2:adapter-rxjava2:2.3.0",
+            rxjava                       : "io.reactivex.rxjava2:rxjava:2.1.7",
+            //解决RxJava内存泄漏，但在联网请求的时候使用了liveData，其实已经解决了。观察事件不能取消。
+            //同时在单独使用rxJava的时候还是要用。比如在启动页，还未去主页面，手动点击返回键的时候有效
+            rxlifecycle_components       : "com.trello.rxlifecycle2:rxlifecycle-components:2.1.0",
+            lifecycle_extensions         : "androidx.lifecycle:lifecycle-extensions:2.0.0",
+            //Room的依赖引用
+            room_runtime                 : "androidx.room:room-runtime:2.0.0",
+            room_compiler                : "androidx.room:room-compiler:2.0.0",
+            //Room配合RxJava使用
+            room_rxjava2                 : "androidx.room:room-rxjava2:2.0.0",
+            rxandroid                    : "io.reactivex.rxjava2:rxandroid:2.0.2",
+            //广告banner
+            banner                       : "com.youth.banner:banner:2.0.12",
+            //glide
+            glide                        : "com.github.bumptech.glide:glide:4.9.0",
+            compiler                     : "com.github.bumptech.glide:compiler:4.9.0",
+            material                     : "com.google.android.material:material:1.0.0",
+            MoreAboutRecyclerView        : "com.github.lihangleo2:MoreAboutRecyclerView:1.0.1",
+            ShadowLayout                 : "com.github.lihangleo2:ShadowLayout:3.1.0",
+            SmartLoadingView             : "com.github.lihangleo2:SmartLoadingView:2.0.2",
+            SmartRefreshLayout           : "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0",
+            //BRVAH
+            BaseRecyclerViewAdapterHelper: 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50',
+            //沉浸式状态栏
+            immersionbar                 : "com.gyf.immersionbar:immersionbar:3.0.0",
+            //管理cookieJar的
+            PersistentCookieJar          : "com.github.franmontiel:PersistentCookieJar:v1.0.1",
+            //eventbus
+            eventbus                     : "org.greenrobot:eventbus:3.0.0",
+            //rxpermissions
+            rxpermissions                : "com.github.tbruyelle:rxpermissions:0.10.2"
+    ]
+
+    //keystore
+    keystorePassword = '123456'
+    alias = 'key0'
+    aliasPassword = '123456'
+}

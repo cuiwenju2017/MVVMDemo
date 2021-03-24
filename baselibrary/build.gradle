@@ -1,0 +1,68 @@
+apply plugin: 'com.android.library'
+
+def config = rootProject.ext.ver
+def library = rootProject.ext.library
+
+android {
+    compileSdkVersion config.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    api library.okhttp
+    api library.retrofit
+    api library.converter_gson
+    api library.adapter_rxjava2
+    api library.rxjava
+    api library.rxlifecycle_components
+    api library.lifecycle_extensions
+    api library.room_runtime
+    api library.room_compiler
+    api library.room_rxjava2
+    api library.rxandroid
+    api library.banner
+    api library.glide
+    api library.compiler
+    api library.material
+    api library.MoreAboutRecyclerView
+    api library.ShadowLayout
+    api library.SmartLoadingView
+    api library.SmartRefreshLayout
+    api library.BaseRecyclerViewAdapterHelper
+    api library.immersionbar
+    api library.PersistentCookieJar
+    api library.eventbus
+    api library.rxpermissions
+}
