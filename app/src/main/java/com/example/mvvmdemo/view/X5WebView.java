@@ -29,6 +29,7 @@ import com.example.mvvmdemo.R;
 
 //这样写完后，之后和正常的webView一个用法，只不过走的是x5内核
 public class X5WebView extends WebView {
+
     private ProgressBar mProgressBar;
     private LeoTitleBar leoTitleBar;
 

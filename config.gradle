@@ -49,7 +49,9 @@ ext {
             //eventbus
             eventbus                     : "org.greenrobot:eventbus:3.0.0",
             //rxpermissions
-            rxpermissions                : "com.github.tbruyelle:rxpermissions:0.10.2"
+            rxpermissions                : "com.github.tbruyelle:rxpermissions:0.10.2",
+            //mmkv-static
+            mmkv_static                  : "com.tencent:mmkv-static:1.2.7"
     ]
 
     //keystore

@@ -1,10 +1,7 @@
 package com.example.mvvmdemo.ui.main;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
-import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,16 +26,10 @@ import com.example.mvvmdemo.ui.main.adapter.ImageTitleNumAdapter;
 import com.example.mvvmdemo.ui.webview.WebActivity;
 import com.gyf.immersionbar.ImmersionBar;
 import com.lihang.nbadapter.BaseAdapter;
+import com.tencent.mmkv.MMKV;
 import com.youth.banner.Banner;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.List;
-
-import kotlin.jvm.internal.Intrinsics;
-
-import static androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO;
-import static androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES;
 
 public class MainActivity extends BaseActivity<MainViewModel, ActivityMainBinding> implements BaseAdapter.OnItemClickListener<UserArticle.DatasBean> {
 
@@ -47,6 +38,7 @@ public class MainActivity extends BaseActivity<MainViewModel, ActivityMainBindin
     private Banner banner;
     //沉浸式状态栏
     protected ImmersionBar mImmersionBar;
+    private AppCompatDelegate delegate;
 
     @Override
     protected int getContentViewId() {

@@ -2,10 +2,14 @@ package com.example.mvvmdemo;
 
 import android.app.Application;
 import android.content.Context;
+
+import androidx.appcompat.app.AppCompatDelegate;
+
 import com.example.baselibrary.utils.LeoUtils;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
 import com.scwang.smartrefresh.layout.header.ClassicsHeader;
+import com.tencent.mmkv.MMKV;
 
 /**
  * Created by leo
@@ -25,6 +29,8 @@ public class MyApplication extends Application {
         super.onCreate();
         context = this;
         LeoUtils.initContext(this);
+        //初始化MMKV
+        MMKV.initialize(this);
 
         //设置全局的Header构建器
         SmartRefreshLayout.setDefaultRefreshHeaderCreator((mContext, layout) -> {
