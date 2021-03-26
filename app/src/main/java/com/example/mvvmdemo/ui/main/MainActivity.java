@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.example.baselibrary.base.BaseRVAdapter;
@@ -26,7 +25,6 @@ import com.example.mvvmdemo.ui.main.adapter.ImageTitleNumAdapter;
 import com.example.mvvmdemo.ui.webview.WebActivity;
 import com.gyf.immersionbar.ImmersionBar;
 import com.lihang.nbadapter.BaseAdapter;
-import com.tencent.mmkv.MMKV;
 import com.youth.banner.Banner;
 
 import java.util.List;
@@ -38,7 +36,6 @@ public class MainActivity extends BaseActivity<MainViewModel, ActivityMainBindin
     private Banner banner;
     //沉浸式状态栏
     protected ImmersionBar mImmersionBar;
-    private AppCompatDelegate delegate;
 
     @Override
     protected int getContentViewId() {
@@ -111,10 +108,6 @@ public class MainActivity extends BaseActivity<MainViewModel, ActivityMainBindin
         binding.smartRefreshLayout.setOnLoadMoreListener(refreshLayout -> {
             page++;
             getUserArticleList(page, ParamsBuilder.build().isShowDialog(false), GetDataType.LOADMORE);
-        });
-
-        binding.fab.setOnClickListener(v -> {
-
         });
     }
 

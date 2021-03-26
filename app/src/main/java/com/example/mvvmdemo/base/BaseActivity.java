@@ -7,7 +7,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatCallback;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.lifecycle.ViewModelProviders;
@@ -18,6 +22,7 @@ import com.example.baselibrary.utils.ToastUtils;
 import com.example.baselibrary.view.CustomProgress;
 import com.example.mvvmdemo.bean.Resource;
 import com.google.gson.JsonSyntaxException;
+import com.tencent.mmkv.MMKV;
 import com.trello.rxlifecycle2.components.support.RxFragmentActivity;
 
 import java.lang.reflect.ParameterizedType;

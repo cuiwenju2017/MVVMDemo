@@ -6,4 +6,5 @@
 
     <color name="white">#232323</color>
     <color name="black">#ffffff</color>
+    <color name="status_background">#232323</color>
 </resources>
