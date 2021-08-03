@@ -6,9 +6,7 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
-
 import androidx.recyclerview.widget.GridLayoutManager;
-
 import com.example.baselibrary.base.BaseRVAdapter;
 import com.example.baselibrary.base.BaseRVHolder;
 import com.example.baselibrary.utils.ActivitysBuilder;
@@ -21,7 +19,7 @@ import com.example.mvvmdemo.bean.BannersBean;
 import com.example.mvvmdemo.bean.GetDataType;
 import com.example.mvvmdemo.bean.UserArticle;
 import com.example.mvvmdemo.databinding.ActivityMainBinding;
-import com.example.mvvmdemo.ui.main.adapter.ImageTitleNumAdapter;
+import com.example.mvvmdemo.ui.adapter.ImageTitleNumAdapter;
 import com.example.mvvmdemo.ui.webview.WebActivity;
 import com.gyf.immersionbar.ImmersionBar;
 import com.lihang.nbadapter.BaseAdapter;
@@ -29,7 +27,7 @@ import com.youth.banner.Banner;
 
 import java.util.List;
 
-public class MainActivity extends BaseActivity<MainViewModel, ActivityMainBinding> implements BaseAdapter.OnItemClickListener<UserArticle.DatasBean> {
+public class MainActivity extends BaseActivity<MainViewModel, ActivityMainBinding> implements BaseAdapter.OnItemClickListener<UserArticle.DatasBean>, View.OnClickListener {
 
     private int page = 0;
     private BaseRVAdapter<UserArticle.DatasBean> adapter;
@@ -117,7 +115,6 @@ public class MainActivity extends BaseActivity<MainViewModel, ActivityMainBindin
             return;
         }
         switch (v.getId()) {
-
         }
     }
 

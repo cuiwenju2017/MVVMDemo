@@ -17,13 +17,11 @@ import retrofit2.http.Path;
  */
 public interface RetrofitApiService {
 
-    String BASE_URL2 = "https://gank.io/";
-
     //广场列表数据
     @GET("user_article/list/{page}/json")
     Observable<ResponModel<UserArticle>> getUserArticleList(@Path("page") int page);
 
     //干货banners图
-    @GET(BASE_URL2 + "api/v2/banners")
+    @GET(SystemConst.BASE_URL2 + "api/v2/banners")
     Observable<ResponModel<List<BannersBean>>> getBanner();
 }

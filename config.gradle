@@ -51,7 +51,9 @@ ext {
             //rxpermissions
             rxpermissions                : "com.github.tbruyelle:rxpermissions:0.10.2",
             //mmkv-static
-            mmkv_static                  : "com.tencent:mmkv-static:1.2.7"
+            mmkv_static                  : "com.tencent:mmkv-static:1.2.7",
+            //解决65535库
+            multidex                     : "androidx.multidex:multidex:2.0.0"
     ]
 
     //keystore

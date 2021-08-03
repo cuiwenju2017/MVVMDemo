@@ -20,6 +20,7 @@ import com.example.baselibrary.R;
 import com.example.baselibrary.utils.NetWorkUtils;
 import com.example.baselibrary.utils.ToastUtils;
 import com.example.baselibrary.view.CustomProgress;
+import com.example.mvvmdemo.api.SystemConst;
 import com.example.mvvmdemo.bean.Resource;
 import com.google.gson.JsonSyntaxException;
 import com.tencent.mmkv.MMKV;
@@ -59,6 +60,9 @@ public abstract class BaseActivity<VM extends BaseViewModel, VDB extends ViewDat
         createViewModel();
         processLogic();
         setListener();
+
+        int iValue = SystemConst.kv.decodeInt("night_day");
+        AppCompatDelegate.setDefaultNightMode(iValue);
     }
 
     public void createViewModel() {

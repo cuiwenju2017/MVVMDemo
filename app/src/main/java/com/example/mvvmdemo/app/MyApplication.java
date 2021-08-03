@@ -1,12 +1,9 @@
-package com.example.mvvmdemo;
+package com.example.mvvmdemo.app;
 
-import android.app.Application;
 import android.content.Context;
-import android.util.Log;
-
-import androidx.appcompat.app.AppCompatDelegate;
 
 import com.example.baselibrary.utils.LeoUtils;
+import com.example.mvvmdemo.R;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
 import com.scwang.smartrefresh.layout.header.ClassicsHeader;
@@ -16,7 +13,7 @@ import com.tencent.mmkv.MMKV;
  * Created by leo
  * on 2019/10/15.
  */
-public class MyApplication extends Application {
+public class MyApplication extends BaseApplication {
 
     private static MyApplication context;
 

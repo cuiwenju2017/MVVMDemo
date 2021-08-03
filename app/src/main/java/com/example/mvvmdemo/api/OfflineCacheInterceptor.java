@@ -1,7 +1,7 @@
 package com.example.mvvmdemo.api;
 
 import com.example.baselibrary.utils.NetWorkUtils;
-import com.example.mvvmdemo.MyApplication;
+import com.example.mvvmdemo.app.MyApplication;
 
 import java.io.IOException;
 import okhttp3.Interceptor;

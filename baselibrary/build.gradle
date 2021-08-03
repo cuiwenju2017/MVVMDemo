@@ -66,4 +66,5 @@ dependencies {
     api library.eventbus
     api library.rxpermissions
     api library.mmkv_static
+    api library.multidex
 }
