@@ -57,7 +57,6 @@ public class HttpLogInterceptor implements Interceptor {
         long endTime = SystemClock.elapsedRealtime();
         long duration = endTime - startTime;
 
-
         //url
         String url = request.url().toString();
         log("┌───────Request Start────────────────────────────");
@@ -69,7 +68,6 @@ public class HttpLogInterceptor implements Interceptor {
             for (int i = 0, count = headers.size(); i < count; i++) {
                 if (!headerIgnoreMap.containsKey(headers.name(i))) {
                     log("请求头部 -->>" + headers.name(i) + ": " + headers.value(i));
-
                 }
             }
         }
@@ -93,7 +91,6 @@ public class HttpLogInterceptor implements Interceptor {
         }
 
         log("请求返回 -->>" + responseString);
-
 
         log("└───────Request End─────────────────────────────" + "\n" + "-");
         return response;
