@@ -9,7 +9,6 @@ import com.tencent.mmkv.MMKV;
 public class SystemConst {
     //域名
     public static final String DEFAULT_SERVER_RELEASE = "https://www.wanandroid.com/";
-    public static final String BASE_URL2 = "https://gank.io/";
 
     //公共参数
     public static final MMKV kv = MMKV.defaultMMKV();

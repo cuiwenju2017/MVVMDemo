@@ -51,7 +51,7 @@ public class ImageTitleNumAdapter extends BannerAdapter<BannersBean, ImageTitleN
     @Override
     public void onBindView(BannerViewHolder holder, BannersBean data, int position, int size) {
         BannerImageTitleNumBinding binding = DataBindingUtil.getBinding(holder.itemView);
-        Glide.with(context).load(data.getImage()).into(binding.image);
+        Glide.with(context).load(data.getImagePath()).into(binding.image);
         binding.bannerTitle.setText(data.getTitle());
         //可以在布局文件中自己实现指示器，亦可以使用banner提供的方法自定义指示器，目前样式较少，后面补充
         binding.numIndicator.setText((position + 1) + "/" + size);

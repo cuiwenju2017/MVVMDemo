@@ -22,6 +22,6 @@ public interface RetrofitApiService {
     Observable<ResponModel<UserArticle>> getUserArticleList(@Path("page") int page);
 
     //干货banners图
-    @GET(SystemConst.BASE_URL2 + "api/v2/banners")
+    @GET("banner/json")
     Observable<ResponModel<List<BannersBean>>> getBanner();
 }
